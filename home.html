@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Navigation menus</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles/group_2.css">
+
+		<!--The style for the rollover image-->
+
+		<style>
+			#image1 {
+			  background-image: url("images/stellar_type_table.jpg");
+			  width: 466px;
+			  height: 200px;
+			  margin-left: auto;
+			  margin-right: auto;
+			  display:block
+			  
+			}
+			#image1:hover {
+			  background-image: url("images/stellar_type_sizes.jpg");
+			  width: 466px;
+			  height: 200px;
+			  margin-left: auto;
+			  margin-right: auto;
+			  display:block
+			}
+		  </style> 
+	</head>
+
+    <body>
+
+		<!--Body header for each page-->
+
+		<h1>Stars Within Eight Light Years of Earth</h1>
+		<br>
+
+		<!--Two tier navigation menu on each page expect the newsletter page-->
+		<!--Set the page to current so it has a different color-->
+
+   		<nav id="nav_menu">
+    		<ul>
+    			<li><a href="home.html" class="current">Home</a></li>
+            	<li><a  href="type_g.html">G</a>
+                    <ul>
+                        <li><a href="s_sol.html">Sol</a></li>
+                        <li><a href="s_rigil_kentaurus.html">Rigel Kentaurus</a></li>
+                    </ul>
+            	</li>
+            	<li><a  href="type_k.html">K</a>
+            		<ul>
+                		<li><a href="s_toliman.html">Toliman</a></li>
+                	</ul>    				
+    			</li>         
+            	<li><a  href="type_m.html">M</a>
+            		<ul>
+                		<li><a href="s_proxima_centauri.html">Proxima Centauri</a></li>
+						<li><a href="s_barnards_star.html">Barnard's Star</a></li>
+						<li><a href="s_wolf_359.html">Wolf 359</a></li>
+                	</ul>    				
+    			</li> 
+				<li><a  href="newsletter_form.html">Newsletter</a></li>              
+    		</ul>
+    	</nav>
+
+		<!--Instruction for use of the Navigation bar on the home page only-->
+
+		<p>Use the Navigation Bar to go a page for stars of that stellar type or a specific star.</p>
+		<br>
+
+		<!--Instruction for use of the map image to go to the star pages-->
+
+		<h3>Map showing relative location and distance of the six nearest stars.  
+			Click on the star or star name to go to a page on that star.</h3>
+		<br>
+
+		<!--Set up the map links and coordination-->
+
+		<img src="images/nearby_stars.jpg" alt="Relative Location of Nearby Stars" usemap="#nearby_stars" width="700" height="300">
+		<map name="nearby_stars">
+  			<area shape="poly" coords="70,0,70,20,140,20,140,0,70,0" alt="Wolf 359"
+  			href="s_wolf_359.html">
+
+			<area shape="poly" coords="260,200,360,200,360,240,260,240,260,200" alt="The Sun (Sol)"
+  			href="s_sol.html">
+
+			<area shape="poly" coords="360,260,480,260,480,275,360,275,360,260" alt="Proxima Centauri"
+  			href="s_proxima_centauri.html">
+
+			<area shape="poly" coords="260,260,360,260,360,290,290,290,260,260" alt="Rigil Kentaurus"
+  			href="s_rigil_kentaurus.html">
+
+			<area shape="poly" coords="360,275,425,275,425,290,360,290,360,275" alt="Toliman"
+  			href="s_toliman.html">
+
+			<area shape="poly" coords="475,160,580,160,580,175,475,175,475,160" alt="Barnard's Star"
+  			href="s_barnards_star.html">
+		</map>
+    	<main>
+
+			<!--Information for the page-->
+
+    		<h2>Star Classification</h2>
+			<p>Stars are classified based on temperature, from the hottest (O) to the coolest (M). 
+				There are six stars within eight light years of our Sun - two type G, one type K, 
+				and three type M. The table shows the seven star types and their temperatures and color.
+				Their mass and radius are shown relative to the size of the Sun (Sol) and also the 
+				percentage the type of star is of all stars in the galaxy. Roll over the table to see 
+				relative sizes, temperatures, and colors of the seven star types.
+			</p>
+			<br>
+
+		<!--Display the rollover images-->
+
+			<p id="image1"></p>
+
+        </main>
+
+		<!--Display the newsletter link in the footer-->
+
+		<footer>
+			<br>
+			<p>This website created by: Elizabeth Audenaert, Lucas Beasley, and Nick Marsh</p>
+		</footer>
+    </body>
+</html>

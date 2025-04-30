@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Complete a Form</title>
+	<link rel="stylesheet" href="styles/group_2.css">
+
+    <style>
+    	* {
+    		margin: 0;
+    		padding: 0;
+    	}
+		body {
+			font: 87.5% Arial, Helvetica, sans-serif;
+			width: 705px;
+		    margin: 20px auto;
+		    padding: 20px;
+		    border: 2px solid blue;
+		}
+		h1 {
+			color: blue; 
+			font-size: 140%;
+            text-align: center;
+		}
+		h2 {
+			color: blue; 
+			font-size: 115%;
+			padding: .5em 0;
+			text-align: center;
+		}
+		label {
+			color: blue;
+			float:left;
+			width: 20em;
+			font-weight: bold;
+			text-align: right;
+		}
+		input {
+			width: 15em;
+			margin: 0 0 .5em 1em;
+			text-align: center;
+		}
+		#button, #reset {
+			width: 7em;
+			background-color: silver;
+			box-shadow: 2px 2px 0 blue; }
+
+		#button {
+			margin-left: 19em;
+		}
+	</style>
+</head>
+
+<body>
+
+	
+		<!--Two tier navigation menu on each page expect the newsletter page-->
+		<!--Set the page to current so it has a different color-->
+
+		<nav id="nav_menu">
+    		<ul>
+    			<li><a href="home.html" >Home</a></li>
+            	<li><a  href="type_g.html">G</a>
+                    <ul>
+                        <li><a href="s_sol.html">Sol</a></li>
+                        <li><a href="s_rigil_kentaurus.html">Rigel Kentaurus</a></li>
+                    </ul>
+            	</li>
+            	<li><a  href="type_k.html">K</a>
+            		<ul>
+                		<li><a href="s_toliman.html">Toliman</a></li>
+                	</ul>    				
+    			</li>         
+            	<li><a  href="type_m.html">M</a>
+            		<ul>
+                		<li><a href="s_proxima_centauri.html">Proxima</a></li>
+						<li><a href="s_barnards_star.html">Barnard's Star</a></li>
+						<li><a href="s_wolf_359.html">Wolf 359</a></li>
+                	</ul>    				
+    			</li>                
+				<li><a  href="newsletter_form.html" class="current">Newsletter</a></li>              
+    		</ul>
+    	</nav>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Join Our Monthly Newsletter!</h1>
+<h2>Stay up to date on the latest scientific findings in astronomy about nearby stars</h2><br>
+<form name="myform" action="newsletter_data.html" method="get">
+    <label for="firstname">First name:</label>
+    <input type="text" name="firstname" id="firstname" required> <br>
+    <label for="lastname">Last name:</label>
+    <input type="text" name="lastname" id="lastname" required><br>
+	<label for="email">Email address:</label>
+    <input type="email" name="email" id="email" autofocus required><br>
+    <h2>Thank you for subscribing to our Newsletter!</h2>
+	<br>
+	<input type="submit" name="register" id="button" value="Sign Up!">
+    	<input type="reset" name="reset" id="reset" value="Cancel">
+     
+</form>
+</body>
+</html>

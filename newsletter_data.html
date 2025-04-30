@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Newsletter Data</title>
+<link rel="stylesheet" href="styles/group_2.css">
+<style>
+    body {
+    	width: 706px;
+    	margin: 0 auto;
+    	padding: 0 30px;
+    	border: 2px solid blue;
+    }
+    dt {
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+
+<body>
+    <h1>Newsletter Data</h1>
+    
+		<!--Two tier navigation menu on each page expect the newsletter page-->
+		<!--Set the page to current so it has a different color-->
+
+        <nav id="nav_menu">
+    		<ul>
+    			<li><a href="home.html">Home</a></li>
+            	<li><a  href="type_g.html">G</a>
+                    <ul>
+                        <li><a href="s_sol.html">Sol</a></li>
+                        <li><a href="s_rigil_kentaurus.html">Rigel Kentaurus</a></li>
+                    </ul>
+            	</li>
+            	<li><a  href="type_k.html">K</a>
+            		<ul>
+                		<li><a href="s_toliman.html">Toliman</a></li>
+                	</ul>    				
+    			</li>         
+            	<li><a  href="type_m.html">M</a>
+            		<ul>
+                		<li><a href="s_proxima_centauri.html">Proxima Centauri</a></li>
+						<li><a href="s_barnards_star.html">Barnard's Star</a></li>
+						<li><a href="s_wolf_359.html">Wolf 359</a></li>
+                	</ul>    				
+    			</li> 
+				<li><a  href="newsletter_form.html" class="current">Newsletter</a></li>              
+    		</ul>
+    	</nav>
+
+    <script>display_data();</script>
+</body>
+</html>
